@@ -1,0 +1,118 @@
+{
+  "items": [
+    {
+      "id": "osano-ls-001",
+      "name": "osano_consentmanager_tattles",
+      "provider": "Osano",
+      "category": "Essential",
+      "persistence": "Session (cleared on tab close)",
+      "regex": "^osano_consentmanager_tattles$",
+      "description": "localStorage item used by Osano for script and cookie discovery processes. Session-based; not sent to the server with HTTP requests. Classified as Essential because the CMP relies on it for consent enforcement.",
+      "sourceUrl": "https://docs.osano.com/hc/en-us/articles/22472101620756-Osano-Cookies",
+      "addedBy": "seed"
+    },
+    {
+      "id": "vwo-ls-001",
+      "name": "_vwo_{ACCOUNT_ID}_config",
+      "provider": "VWO (Visual Website Optimizer)",
+      "category": "Analytics",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^_vwo_\\d+_config$",
+      "description": "Stores VWO SmartCode configuration for the account. Contains settings such as enabled features, sampling rates, and campaign parameters.",
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO",
+      "addedBy": "seed"
+    },
+    {
+      "id": "vwo-ls-002",
+      "name": "_vwo_nlsCache",
+      "provider": "VWO (Visual Website Optimizer)",
+      "category": "Analytics",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^_vwo_nlsCache$",
+      "description": "Caches VWO Natural Language Search (NLS) data locally to speed up subsequent script evaluations.",
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO",
+      "addedBy": "seed"
+    },
+    {
+      "id": "vwo-ls-003",
+      "name": "_vwo_nls_q_{ACCOUNT_ID}",
+      "provider": "VWO (Visual Website Optimizer)",
+      "category": "Analytics",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^_vwo_nls_q_\\d+$",
+      "description": "Queues VWO Natural Language Search events for the account before they are flushed to VWO servers.",
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO",
+      "addedBy": "seed"
+    },
+    {
+      "id": "vwo-ls-004",
+      "name": "vwoSn",
+      "provider": "VWO (Visual Website Optimizer)",
+      "category": "Analytics",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^vwoSn$",
+      "description": "Stores the VWO session number for the current visitor. Used to track how many sessions a visitor has had, supporting session-based targeting and segmentation in VWO campaigns.",
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO",
+      "addedBy": "seed"
+    },
+    {
+      "id": "grecaptcha-ls-001",
+      "name": "_grecaptcha",
+      "provider": "Google reCAPTCHA",
+      "category": "Essential",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^_grecaptcha$",
+      "description": "Set by Google reCAPTCHA to perform risk analysis and distinguish humans from automated bots. Stores configuration data required for reCAPTCHA's anti-abuse checks.",
+      "sourceUrl": "https://cloud.google.com/recaptcha/docs/faq",
+      "addedBy": "seed"
+    },
+    {
+      "id": "modernizr-ls-001",
+      "name": "modernizr",
+      "provider": "Modernizr",
+      "category": "Essential",
+      "persistence": "Transient (set and removed during feature detection)",
+      "regex": "^modernizr$",
+      "description": "Temporary key set by Modernizr.js to test if localStorage is functional. Set, read back, and immediately removed. Should not persist.",
+      "sourceUrl": "https://github.com/Modernizr/Modernizr/blob/master/feature-detects/storage/localstorage.js",
+      "addedBy": "seed"
+    }
+  ],
+  "categories": [
+    {
+      "id": "Essential",
+      "name": "Essential",
+      "description": "localStorage items required for the website or consent manager to function properly.",
+      "color": "#22c55e"
+    },
+    {
+      "id": "Analytics",
+      "name": "Analytics",
+      "description": "localStorage items used by analytics and testing tools to store visitor data locally.",
+      "color": "#eab308"
+    },
+    {
+      "id": "Marketing",
+      "name": "Marketing",
+      "description": "localStorage items used for advertising, retargeting, or cross-site tracking.",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "Personalized",
+      "name": "Personalized",
+      "description": "localStorage items that store user preferences and provide enhanced, tailored features.",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "Blocklisted",
+      "name": "Blocklisted",
+      "description": "localStorage items blocked by policy.",
+      "color": "#ef4444"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-02-23",
+    "totalItems": 7
+  }
+}

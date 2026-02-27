@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Database - Internal Reference</title>
+    <link rel="stylesheet" href="cookies-db.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Compliance Database</h1>
+                <p class="subtitle">Internal cookie, script &amp; localStorage reference with Osano-style categorization</p>
+            </div>
+            <!-- Page Navigation -->
+            <nav class="page-nav">
+                <button class="page-nav-tab active" data-page="cookies">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                        <path d="M8.5 8.5v.01"></path>
+                        <path d="M16 15.5v.01"></path>
+                        <path d="M12 12v.01"></path>
+                        <path d="M11 17v.01"></path>
+                        <path d="M7 14v.01"></path>
+                    </svg>
+                    Cookies
+                </button>
+                <button class="page-nav-tab" data-page="scripts">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Scripts
+                </button>
+                <button class="page-nav-tab" data-page="localstorage">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                        <path d="M3 12A9 3 0 0 0 21 12"></path>
+                    </svg>
+                    LocalStorage
+                </button>
+            </nav>
+        </header>
+
+        <!-- ==================== COOKIES PAGE ==================== -->
+        <main class="main-content page-content active" id="cookiesPage">
+            <!-- Search and Actions Bar -->
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search by name, provider, description, or regex pattern..." autocomplete="off">
+                    <button id="clearSearch" class="clear-btn" title="Clear search" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="action-buttons">
+                    <button id="addCookieBtn" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        Add Cookie
+                    </button>
+                    <button id="exportBtn" class="btn btn-secondary" title="Export database">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">
+                    All
+                    <span class="count" id="count-all">0</span>
+                </button>
+                <button class="category-tab" data-category="Essential">
+                    <span class="category-dot essential"></span>
+                    Essential
+                    <span class="count" id="count-Essential">0</span>
+                </button>
+                <button class="category-tab" data-category="Analytics">
+                    <span class="category-dot analytics"></span>
+                    Analytics
+                    <span class="count" id="count-Analytics">0</span>
+                </button>
+                <button class="category-tab" data-category="Marketing">
+                    <span class="category-dot marketing"></span>
+                    Marketing
+                    <span class="count" id="count-Marketing">0</span>
+                </button>
+                <button class="category-tab" data-category="Personalized">
+                    <span class="category-dot personalized"></span>
+                    Personalized
+                    <span class="count" id="count-Personalized">0</span>
+                </button>
+                <button class="category-tab" data-category="Blocklisted">
+                    <span class="category-dot blocklisted"></span>
+                    Blocklisted
+                    <span class="count" id="count-Blocklisted">0</span>
+                </button>
+            </div>
+
+            <!-- Results Info -->
+            <div class="results-info" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span id="resultsCount">0 cookies found</span>
+                <button class="deprecated-toggle" id="deprecatedToggle" title="Show only deprecated cookies">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    Deprecated
+                    <span class="count" id="count-deprecated">0</span>
+                </button>
+            </div>
+
+            <!-- Cookie List -->
+            <div class="cookie-list" id="cookieList">
+                <!-- Cookies will be rendered here -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <h3>No cookies found</h3>
+                <p>Try adjusting your search or add a new cookie.</p>
+            </div>
+        </main>
+
+        <!-- ==================== SCRIPTS PAGE ==================== -->
+        <main class="main-content page-content" id="scriptsPage">
+            <!-- Search and Actions Bar -->
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                    <input type="text" id="scriptSearchInput" placeholder="Search scripts by name, provider, description, or regex rule..." autocomplete="off">
+                    <button id="scriptClearSearch" class="clear-btn" title="Clear search" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="action-buttons">
+                    <button id="addScriptBtn" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        Add Script
+                    </button>
+                    <button id="scriptExportBtn" class="btn btn-secondary" title="Export scripts database">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs" id="scriptCategoryTabs">
+                <button class="category-tab active" data-category="all">
+                    All
+                    <span class="count" id="script-count-all">0</span>
+                </button>
+                <button class="category-tab" data-category="Essential">
+                    <span class="category-dot essential"></span>
+                    Essential
+                    <span class="count" id="script-count-Essential">0</span>
+                </button>
+                <button class="category-tab" data-category="Analytics">
+                    <span class="category-dot analytics"></span>
+                    Analytics
+                    <span class="count" id="script-count-Analytics">0</span>
+                </button>
+                <button class="category-tab" data-category="Marketing">
+                    <span class="category-dot marketing"></span>
+                    Marketing
+                    <span class="count" id="script-count-Marketing">0</span>
+                </button>
+                <button class="category-tab" data-category="Personalized">
+                    <span class="category-dot personalized"></span>
+                    Personalized
+                    <span class="count" id="script-count-Personalized">0</span>
+                </button>
+                <button class="category-tab" data-category="Blocklisted">
+                    <span class="category-dot blocklisted"></span>
+                    Blocklisted
+                    <span class="count" id="script-count-Blocklisted">0</span>
+                </button>
+            </div>
+
+            <!-- Results Info -->
+            <div class="results-info">
+                <span id="scriptResultsCount">0 scripts found</span>
+            </div>
+
+            <!-- Script List -->
+            <div class="cookie-list" id="scriptList">
+                <!-- Scripts will be rendered here -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="scriptEmptyState" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <h3>No scripts found</h3>
+                <p>Try adjusting your search or add a new script.</p>
+            </div>
+        </main>
+
+        <!-- ==================== LOCALSTORAGE PAGE ==================== -->
+        <main class="main-content page-content" id="localstoragePage">
+            <!-- Search and Actions Bar -->
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                    <input type="text" id="lsSearchInput" placeholder="Search localStorage items by name, provider, description, or regex pattern..." autocomplete="off">
+                    <button id="lsClearSearch" class="clear-btn" title="Clear search" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="action-buttons">
+                    <button id="addLsBtn" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        Add Item
+                    </button>
+                    <button id="lsExportBtn" class="btn btn-secondary" title="Export localStorage database">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs" id="lsCategoryTabs">
+                <button class="category-tab active" data-category="all">
+                    All
+                    <span class="count" id="ls-count-all">0</span>
+                </button>
+                <button class="category-tab" data-category="Essential">
+                    <span class="category-dot essential"></span>
+                    Essential
+                    <span class="count" id="ls-count-Essential">0</span>
+                </button>
+                <button class="category-tab" data-category="Analytics">
+                    <span class="category-dot analytics"></span>
+                    Analytics
+                    <span class="count" id="ls-count-Analytics">0</span>
+                </button>
+                <button class="category-tab" data-category="Marketing">
+                    <span class="category-dot marketing"></span>
+                    Marketing
+                    <span class="count" id="ls-count-Marketing">0</span>
+                </button>
+                <button class="category-tab" data-category="Personalized">
+                    <span class="category-dot personalized"></span>
+                    Personalized
+                    <span class="count" id="ls-count-Personalized">0</span>
+                </button>
+                <button class="category-tab" data-category="Blocklisted">
+                    <span class="category-dot blocklisted"></span>
+                    Blocklisted
+                    <span class="count" id="ls-count-Blocklisted">0</span>
+                </button>
+            </div>
+
+            <!-- Results Info -->
+            <div class="results-info">
+                <span id="lsResultsCount">0 items found</span>
+            </div>
+
+            <!-- LocalStorage List -->
+            <div class="cookie-list" id="lsList">
+                <!-- Items will be rendered here -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="lsEmptyState" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <h3>No localStorage items found</h3>
+                <p>Try adjusting your search or add a new item.</p>
+            </div>
+        </main>
+
+        <!-- ==================== LOCALSTORAGE MODALS ==================== -->
+
+        <!-- Add/Edit LocalStorage Item Modal -->
+        <div class="modal-overlay" id="lsModalOverlay">
+            <div class="modal" id="lsModal">
+                <div class="modal-header">
+                    <h2 id="lsModalTitle">Add New Item</h2>
+                    <button class="modal-close" id="lsModalClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form id="lsForm" class="modal-body">
+                    <input type="hidden" id="lsId">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lsName">Key Name <span class="required">*</span></label>
+                            <input type="text" id="lsName" required placeholder="e.g., _vwo_nlsCache">
+                        </div>
+                        <div class="form-group">
+                            <label for="lsProvider">Provider <span class="required">*</span></label>
+                            <input type="text" id="lsProvider" required placeholder="e.g., VWO">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lsCategory">Category <span class="required">*</span></label>
+                            <select id="lsCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="Essential">Essential</option>
+                                <option value="Analytics">Analytics</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Personalized">Personalized</option>
+                                <option value="Blocklisted">Blocklisted</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lsPersistence">Persistence <span class="required">*</span></label>
+                            <input type="text" id="lsPersistence" required placeholder="e.g., Persistent (localStorage), Session">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lsRegex">Regex Pattern <span class="required">*</span></label>
+                        <input type="text" id="lsRegex" required placeholder="e.g., ^_vwo_nlsCache$">
+                        <small class="form-hint">Regular expression to match this localStorage key name</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lsDescription">Description <span class="required">*</span></label>
+                        <textarea id="lsDescription" required rows="3" placeholder="Describe what this localStorage item stores..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lsSourceUrl">Source URL</label>
+                        <input type="url" id="lsSourceUrl" placeholder="https://example.com/documentation">
+                        <small class="form-hint">Link to official documentation or source</small>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="lsCancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="lsSaveBtn">Add Item</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- LocalStorage Detail Modal -->
+        <div class="modal-overlay" id="lsDetailModalOverlay">
+            <div class="modal modal-detail" id="lsDetailModal">
+                <div class="modal-header">
+                    <h2 id="lsDetailModalTitle">Item Details</h2>
+                    <button class="modal-close" id="lsDetailModalClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body" id="lsDetailModalBody">
+                    <!-- Item details will be rendered here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="lsDetailEditBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" id="lsDetailDeleteBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- LocalStorage Delete Confirmation Modal -->
+        <div class="modal-overlay" id="lsDeleteModalOverlay">
+            <div class="modal modal-small" id="lsDeleteModal">
+                <div class="modal-header">
+                    <h2>Confirm Delete</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this localStorage item? This action cannot be undone.</p>
+                    <p class="delete-cookie-name" id="deleteLsName"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="lsDeleteCancelBtn">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="lsDeleteConfirmBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== COOKIE MODALS ==================== -->
+
+        <!-- Add/Edit Cookie Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal" id="cookieModal">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Add New Cookie</h2>
+                    <button class="modal-close" id="modalClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form id="cookieForm" class="modal-body">
+                    <input type="hidden" id="cookieId">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cookieName">Cookie Name <span class="required">*</span></label>
+                            <input type="text" id="cookieName" required placeholder="e.g., _ga">
+                        </div>
+                        <div class="form-group">
+                            <label for="cookieProvider">Provider <span class="required">*</span></label>
+                            <input type="text" id="cookieProvider" required placeholder="e.g., Google Analytics">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cookieCategory">Category <span class="required">*</span></label>
+                            <select id="cookieCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="Essential">Essential</option>
+                                <option value="Analytics">Analytics</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Personalized">Personalized</option>
+                                <option value="Blocklisted">Blocklisted</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cookieExpiry">Expiry <span class="required">*</span></label>
+                            <input type="text" id="cookieExpiry" required placeholder="e.g., 2 years, Session, 30 days">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cookieRegex">Regex Pattern <span class="required">*</span></label>
+                        <input type="text" id="cookieRegex" required placeholder="e.g., ^_ga$">
+                        <small class="form-hint">Regular expression to match this cookie name</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cookieDescription">Description <span class="required">*</span></label>
+                        <textarea id="cookieDescription" required rows="3" placeholder="Describe what this cookie does..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cookieSourceUrl">Source URL</label>
+                        <input type="url" id="cookieSourceUrl" placeholder="https://example.com/cookie-documentation">
+                        <small class="form-hint">Link to official documentation or source</small>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="saveBtn">Save Cookie</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Cookie Detail Modal -->
+        <div class="modal-overlay" id="detailModalOverlay">
+            <div class="modal modal-detail" id="detailModal">
+                <div class="modal-header">
+                    <h2 id="detailModalTitle">Cookie Details</h2>
+                    <button class="modal-close" id="detailModalClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body" id="detailModalBody">
+                    <!-- Cookie details will be rendered here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="detailEditBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" id="detailDeleteBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div class="modal-overlay" id="deleteModalOverlay">
+            <div class="modal modal-small" id="deleteModal">
+                <div class="modal-header">
+                    <h2>Confirm Delete</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this cookie? This action cannot be undone.</p>
+                    <p class="delete-cookie-name" id="deleteCookieName"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="deleteCancelBtn">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="deleteConfirmBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SCRIPT MODALS ==================== -->
+
+        <!-- Add/Edit Script Modal -->
+        <div class="modal-overlay" id="scriptModalOverlay">
+            <div class="modal" id="scriptModal">
+                <div class="modal-header">
+                    <h2 id="scriptModalTitle">Add New Script</h2>
+                    <button class="modal-close" id="scriptModalClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form id="scriptForm" class="modal-body">
+                    <input type="hidden" id="scriptId">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="scriptName">Script Name <span class="required">*</span></label>
+                            <input type="text" id="scriptName" required placeholder="e.g., Google Tag Manager">
+                        </div>
+                        <div class="form-group">
+                            <label for="scriptProvider">Provider / Vendor <span class="required">*</span></label>
+                            <input type="text" id="scriptProvider" required placeholder="e.g., Google LLC">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scriptCategory">Classification <span class="required">*</span></label>
+                        <select id="scriptCategory" required>
+                            <option value="">Select a classification</option>
+                            <option value="Essential">Essential</option>
+                            <option value="Analytics">Analytics</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Personalized">Personalized</option>
+                            <option value="Blocklisted">Blocklisted</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scriptRegex">Regex Rule <span class="required">*</span></label>
+                        <input type="text" id="scriptRegex" required placeholder="e.g., googletagmanager\\.com">
+                        <small class="form-hint">Regular expression to match script URLs (domain patterns, paths, etc.)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scriptDescription">Description <span class="required">*</span></label>
+                        <textarea id="scriptDescription" required rows="3" placeholder="Describe what this script does and why it is classified this way..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scriptSourceUrl">Source URL</label>
+                        <input type="url" id="scriptSourceUrl" placeholder="https://example.com/script-documentation">
+                        <small class="form-hint">Link to official documentation or vendor page</small>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="scriptCancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="scriptSaveBtn">Add Script</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Script Detail Modal -->
+        <div class="modal-overlay" id="scriptDetailModalOverlay">
+            <div class="modal modal-detail" id="scriptDetailModal">
+                <div class="modal-header">
+                    <h2 id="scriptDetailModalTitle">Script Details</h2>
+                    <button class="modal-close" id="scriptDetailModalClose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body" id="scriptDetailModalBody">
+                    <!-- Script details will be rendered here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="scriptDetailEditBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" id="scriptDetailDeleteBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script Delete Confirmation Modal -->
+        <div class="modal-overlay" id="scriptDeleteModalOverlay">
+            <div class="modal modal-small" id="scriptDeleteModal">
+                <div class="modal-header">
+                    <h2>Confirm Delete</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this script? This action cannot be undone.</p>
+                    <p class="delete-cookie-name" id="deleteScriptName"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="scriptDeleteCancelBtn">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="scriptDeleteConfirmBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification (shared) -->
+        <div class="toast" id="toast">
+            <span class="toast-message" id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="cookies-db.js"></script>
+    <script src="scripts-db.js"></script>
+    <script src="localstorage-db.js"></script>
+</body>
+</html>

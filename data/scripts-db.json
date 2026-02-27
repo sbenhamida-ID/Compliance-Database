@@ -1,0 +1,341 @@
+{
+  "scripts": [
+    {
+      "id": "script-001",
+      "name": "Google reCAPTCHA",
+      "provider": "Google LLC",
+      "category": "Essential",
+      "regex": "(google\\.com|recaptcha\\.net|gstatic\\.cn).*recaptcha",
+      "description": "reCAPTCHA scripts for bot protection and form security. Required for form submissions.",
+      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-002",
+      "name": "Google Tag Manager",
+      "provider": "Google LLC",
+      "category": "Analytics",
+      "regex": "googletagmanager\\.com",
+      "description": "Tag management system for deploying and managing marketing and analytics tags without code changes.",
+      "sourceUrl": "https://developers.google.com/tag-platform/tag-manager",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-003",
+      "name": "Google Static Assets",
+      "provider": "Google LLC",
+      "category": "Essential",
+      "regex": "gstatic\\.com",
+      "description": "Google static CDN for JS, CSS, fonts, and images used by reCAPTCHA, Maps, Fonts, and other widgets. Blocking can break core features.",
+      "sourceUrl": "https://developers.google.com/speed/libraries",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-004",
+      "name": "WordPress Site Scripts",
+      "provider": "WordPress / Website",
+      "category": "Essential",
+      "regex": "https?:\\/\\/(website\\.com|[^/]+\\.local|[^/]+\\.flywheelstaging\\.com)\\/(wp-content|wp-includes)\\/.+\\.js",
+      "description": "All WP core and themes / plugins scripts from: the website, or anything ending in .local, or anything ending in .flywheelstaging.com",
+      "sourceUrl": "https://developer.wordpress.org/themes/basics/including-css-javascript/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-005",
+      "name": "HubSpot Forms",
+      "provider": "HubSpot, Inc.",
+      "category": "Essential",
+      "regex": "js-eu1\\.hsforms\\.net",
+      "description": "HubSpot form embed from EU data center. Required for lead capture and contact forms using HubSpot.",
+      "sourceUrl": "https://developers.hubspot.com/docs/reference/cms/forms",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-006",
+      "name": "VWO (Visual Website Optimizer)",
+      "provider": "Wingify Software Pvt. Ltd.",
+      "category": "Analytics",
+      "regex": "visualwebsiteoptimizer\\.com",
+      "description": "VWO SmartCode for A/B testing, heatmaps, session recordings, and on-site surveys. Used for conversion optimization.",
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360019422834-Configuring-the-VWO-SmartCode-for-Your-Website",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-007",
+      "name": "Auth0",
+      "provider": "Auth0 (Okta)",
+      "category": "Essential",
+      "regex": "auth0\\.com",
+      "description": "Auth0 scripts for login, sign-up, password reset, and session management. Required for Auth0-based identity.",
+      "sourceUrl": "https://auth0.com/docs/libraries/auth0js",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-008",
+      "name": "Stripe.js",
+      "provider": "Stripe, Inc.",
+      "category": "Essential",
+      "regex": "js\\.stripe\\.com",
+      "description": "Stripe.js for payment forms, Checkout, and fraud detection. Required for Stripe payments.",
+      "sourceUrl": "https://docs.stripe.com/js",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-009",
+      "name": "Meta (Facebook) Pixel",
+      "provider": "Meta Platforms, Inc.",
+      "category": "Marketing",
+      "regex": "connect\\.facebook\\.net|facebook\\.com/tr",
+      "description": "Meta Pixel for conversion tracking, audience building, and dynamic ads. Used for Meta ad attribution and retargeting.",
+      "sourceUrl": "https://developers.facebook.com/docs/meta-pixel",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-010",
+      "name": "LinkedIn Insight Tag",
+      "provider": "LinkedIn Corporation",
+      "category": "Marketing",
+      "regex": "snap\\.licdn\\.com|platform\\.linkedin\\.com",
+      "description": "LinkedIn Insight Tag for conversion tracking, remarketing, and campaign analytics. Used for LinkedIn Ads attribution.",
+      "sourceUrl": "https://www.linkedin.com/help/linkedin/answer/65521",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-011",
+      "name": "YouTube Scripts & Tracking",
+      "provider": "Google (YouTube)",
+      "category": "Marketing",
+      "regex": "youtube\\.com|www\\.google\\.com.*youtube",
+      "description": "YouTube scripts for video embeds, view tracking, and ad attribution. Sets marketing cookies and enables cross-site tracking when embedded via the standard youtube.com domain.",
+      "sourceUrl": "https://developers.google.com/youtube/iframe_api_reference",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-028",
+      "name": "YouTube No-Cookie Embed",
+      "provider": "Google (YouTube)",
+      "category": "Essential",
+      "regex": "youtube-nocookie\\.com",
+      "description": "Privacy-enhanced YouTube embed using the youtube-nocookie.com domain. Does not set cookies until the user initiates playback. Suitable for always-load embeds without requiring marketing consent.",
+      "sourceUrl": "https://support.google.com/youtube/answer/171780",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-029",
+      "name": "YouTube IFrame Player API",
+      "provider": "Google (YouTube)",
+      "category": "Essential",
+      "regex": "youtube\\.com/iframe_api",
+      "description": "Lightweight JavaScript loader for the YouTube IFrame Player API. Provides programmatic control (play, pause, state events) over embedded players. Does not perform tracking on its own; used alongside youtube-nocookie.com embeds to enable custom player UX without requiring marketing consent.",
+      "sourceUrl": "https://developers.google.com/youtube/iframe_api_reference",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-012",
+      "name": "HubSpot Analytics",
+      "provider": "HubSpot, Inc.",
+      "category": "Marketing",
+      "regex": "hs-analytics\\.net",
+      "description": "HubSpot analytics script for page-view and session reporting. Sets core analytics cookies; respects consent.",
+      "sourceUrl": "https://knowledge.hubspot.com/privacy-and-consent/what-cookies-does-hubspot-set-in-a-visitor-s-browser",
+      "addedBy": "manual"
+    },
+    {
+      "id": "script-013",
+      "name": "HubSpot Cookie Banner v2",
+      "provider": "HubSpot, Inc.",
+      "category": "Essential",
+      "regex": "hs-banner\\.com",
+      "description": "HubSpot GDPR cookie consent banner (v2). Manages opt-in/opt-out and controls downstream HubSpot tracking.",
+      "sourceUrl": "https://developers.hubspot.com/docs/reference/api/analytics-and-events/cookie-banner/cookie-banner-api",
+      "addedBy": "manual"
+    },
+    {
+      "id": "script-014",
+      "name": "HubSpot Tracking Code",
+      "provider": "HubSpot, Inc.",
+      "category": "Marketing",
+      "regex": "hs-scripts\\.com",
+      "description": "HubSpot main tracking code; bootstraps identification, page-view and event tracking, and loads other HubSpot scripts. Respects consent.",
+      "sourceUrl": "https://knowledge.hubspot.com/reports/install-the-hubspot-tracking-code",
+      "addedBy": "manual"
+    },
+    {
+      "id": "script-015",
+      "name": "HubSpot Collected Forms",
+      "provider": "HubSpot, Inc.",
+      "category": "Marketing",
+      "regex": "hscollectedforms\\.net",
+      "description": "HubSpot script that detects and forwards third-party form submissions to HubSpot. Respects consent.",
+      "sourceUrl": "https://developers.hubspot.com/docs/reference/api/analytics-and-events/tracking-code",
+      "addedBy": "manual"
+    },
+    {
+      "id": "script-016",
+      "name": "Snap Pixel (Snapchat)",
+      "provider": "Snap Inc.",
+      "category": "Marketing",
+      "regex": "sc-static\\.net",
+      "description": "Snapchat Snap Pixel (scevent.min.js) for conversion tracking, audience building, and ad attribution. Accesses cookies, localStorage, sessionStorage, and device info.",
+      "sourceUrl": "https://businesshelp.snapchat.com/s/article/snap-pixel-about",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-017",
+      "name": "Excalidraw vendor bundle",
+      "provider": "Excalidraw / AIchor",
+      "category": "Blocklisted",
+      "regex": "aichor\\.ai.*excalidraw|@excalidraw/excalidraw.*vendor",
+      "description": "Vendor chunk of Excalidraw (open-source whiteboard/diagram library) at v0.17.6. Contains bundled third-party dependencies. Seen from aichor.ai (AI training platform), which may embed Excalidraw in its UI.",
+      "sourceUrl": "https://docs.excalidraw.com/docs/@excalidraw/excalidraw/integration",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-018",
+      "name": "INFIRD CDN",
+      "provider": "INFIRD.COM (Malicious)",
+      "category": "Blocklisted",
+      "regex": "infird\\.com",
+      "description": "Malicious obfuscated scripts distributed via infected browser extensions. Used for tracking, PII/financial data harvesting, bot traffic generation, and chain-loading additional payloads. Contains fake Google Analytics calls spoofing youtube.app pageviews.",
+      "sourceUrl": "",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-019",
+      "name": "ScriptCDN",
+      "provider": "scriptcdn.net (Malicious)",
+      "category": "Blocklisted",
+      "regex": "scriptcdn\\.net",
+      "description": "Rogue adware/redirect domain that hijacks browsers via infected extensions (e.g. Auto Refresh Plus). Redirects to phony virus alerts, gambling, and adult sites. Can steal banking details, inject malicious code, and download additional malware.",
+      "sourceUrl": "https://hackerdose.com/malware/scriptcdn-net-malware/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-020",
+      "name": "Secured Pixel Injector",
+      "provider": "secured-pixel.com (Malicious)",
+      "category": "Blocklisted",
+      "regex": "secured-pixel\\.com",
+      "description": "Malicious injection endpoint (/inj/default.php) part of coordinated attack infrastructure. Linked to credit card skimming disguised as pixel tracking, JavaScript injection campaigns, and ad injection. Receives traffic from known suspicious domains.",
+      "sourceUrl": "https://urlscan.io/domain/secured-pixel.com",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-021",
+      "name": "Lottingem Redirect",
+      "provider": "lottingem.com (Malicious)",
+      "category": "Blocklisted",
+      "regex": "lottingem\\.com",
+      "description": "Adware and browser-hijacking script. Modifies homepage/new tab, displays unwanted ads, redirects to scam pages, abuses push notifications, and tracks user activity. Flagged for suspicious networking (TCP without DNS lookups).",
+      "sourceUrl": "",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-022",
+      "name": "ThreatSpike Wire Inject",
+      "provider": "ThreatSpike Labs",
+      "category": "Blocklisted",
+      "regex": "threatspike\\.com",
+      "description": "ThreatSpike Wire is a legitimate endpoint security agent. Unexpected presence on sites that do not deploy ThreatSpike may indicate a compromised browser extension.",
+      "sourceUrl": "https://wire.threatspike.com/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-023",
+      "name": "Biilut Tracker",
+      "provider": "biilut.com (Unknown)",
+      "category": "Blocklisted",
+      "regex": "biilut\\.com",
+      "description": "Opaque third-party tracking script served with API key and base64-encoded site identifier. Domain registered with identity protection, no public documentation. Hides from search engines (noindex/nofollow).",
+      "sourceUrl": "https://urlscan.io/domain/biilut.com",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-024",
+      "name": "Google APIs CDN",
+      "provider": "Google LLC",
+      "category": "Essential",
+      "regex": "googleapis\\.com",
+      "description": "Google's primary API and CDN domain. Serves Google Fonts stylesheets, open-source JS libraries, and Google Maps API.",
+      "sourceUrl": "https://developers.google.com/speed/libraries",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-025",
+      "name": "Facebook SDK & Scripts",
+      "provider": "Meta Platforms, Inc.",
+      "category": "Marketing",
+      "regex": "facebook\\.net",
+      "description": "Meta's script delivery domain serving the Facebook SDK (sdk.js) for Login, Share, and Like buttons, as well as the Meta Pixel (fbevents.js). Collects IP, browser info, page URL, Facebook cookies, click data, and conversion events.",
+      "sourceUrl": "https://developers.facebook.com/docs/javascript/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-026",
+      "name": "Cloudflare Platform",
+      "provider": "Cloudflare, Inc.",
+      "category": "Essential",
+      "regex": "cloudflare\\.com",
+      "description": "Cloudflare's platform scripts including bot detection challenges (/cdn-cgi/challenge-platform/), Turnstile CAPTCHA, and the cdnjs public library CDN (cdnjs.cloudflare.com). Challenge scripts issue a short-lived cf_clearance cookie (15 min) and are strictly necessary for sites behind Cloudflare. Deferred and runs on a separate thread.",
+      "sourceUrl": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-027",
+      "name": "X (Twitter) Platform & Pixel",
+      "provider": "X Corp. (formerly Twitter)",
+      "category": "Marketing",
+      "regex": "twitter\\.com",
+      "description": "X/Twitter scripts including the X Pixel, widgets.js, and analytics endpoints.",
+      "sourceUrl": "https://business.x.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-030",
+      "name": "Alibaba ARMS iTrace (Woodpecker)",
+      "provider": "Alibaba Group",
+      "category": "Analytics",
+      "regex": "alicdn\\.com",
+      "description": "Alibaba CDN serving tracking and monitoring scripts (ARMS iTrace/Woodpecker). Collects performance metrics, JS errors, API stats, and user behavior. Flagged as a tracker by Ghostery.",
+      "sourceUrl": "https://www.alibabacloud.com/help/en/arms/browser-monitoring/getting-started/implement-browser-monitoring-by-using-cdn",
+      "addedBy": "manual"
+    }
+  ],
+  "categories": [
+    {
+      "id": "Essential",
+      "name": "Essential",
+      "description": "Scripts required for the website to function properly. Blocking them can break core site features.",
+      "color": "#22c55e"
+    },
+    {
+      "id": "Analytics",
+      "name": "Analytics",
+      "description": "Scripts that help understand how visitors interact with the website by collecting usage data.",
+      "color": "#eab308"
+    },
+    {
+      "id": "Marketing",
+      "name": "Marketing",
+      "description": "Scripts used to track visitors across websites for advertising and retargeting purposes.",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "Personalized",
+      "name": "Personalized",
+      "description": "Scripts that allow the website to remember user choices and provide enhanced, tailored features.",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "Blocklisted",
+      "name": "Blocklisted",
+      "description": "Scripts blocked by policy (e.g. known malicious or non-compliant trackers).",
+      "color": "#ef4444"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-02-27",
+    "totalScripts": 28
+  }
+}
