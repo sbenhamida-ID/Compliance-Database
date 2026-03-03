@@ -316,7 +316,7 @@
       "provider": "Vimeo, Inc.",
       "category": "Essential",
       "regex": "vimeo\\.com",
-      "description": "Vimeo's embeddable video player for hosting and playing video content. Use the DNT parameter (?dnt=1) on embed URLs to suppress analytics cookies while keeping playback functional.",
+      "description": "Vimeo's embeddable video player for hosting and playing video content.",
       "sourceUrl": "https://help.vimeo.com/hc/en-us/articles/26080940921361-Vimeo-Player-Cookies",
       "addedBy": "seed"
     }
