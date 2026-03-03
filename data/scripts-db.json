@@ -299,6 +299,26 @@
       "description": "Alibaba CDN serving tracking and monitoring scripts (ARMS iTrace/Woodpecker). Collects performance metrics, JS errors, API stats, and user behavior. Flagged as a tracker by Ghostery.",
       "sourceUrl": "https://www.alibabacloud.com/help/en/arms/browser-monitoring/getting-started/implement-browser-monitoring-by-using-cdn",
       "addedBy": "manual"
+    },
+    {
+      "id": "script-031",
+      "name": "ExploreEarth3D Embed",
+      "provider": "ExploreEarth3D (Unknown)",
+      "category": "Blocklisted",
+      "regex": "exploreearth3d\\.com",
+      "description": "Embeddable 3D globe and satellite imagery viewer. The parent site runs Google Analytics, GTM, and DoubleClick (Google Ads). No public documentation on data collection or privacy practices.",
+      "sourceUrl": "https://urlquery.net/report/70fc3a8b-e27c-4f5a-a638-f3e13bbb8ae2",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-032",
+      "name": "Vimeo Player Embed",
+      "provider": "Vimeo, Inc.",
+      "category": "Personalized",
+      "regex": "vimeo\\.com",
+      "description": "Vimeo's embeddable video player for hosting and playing video content. Sets a vuid analytics cookie (2 years), player preference cookies (volume, quality), and Cloudflare bot-management cookies. Supports a DNT parameter (?dnt=1) to suppress analytics cookies.",
+      "sourceUrl": "https://help.vimeo.com/hc/en-us/articles/26080940921361-Vimeo-Player-Cookies",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -335,7 +355,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-02-27",
-    "totalScripts": 28
+    "lastUpdated": "2026-03-03",
+    "totalScripts": 30
   }
 }
