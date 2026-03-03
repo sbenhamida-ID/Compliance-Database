@@ -1170,6 +1170,28 @@
       "sourceUrl": "https://policies.google.com/technologies/cookies"
     },
     {
+      "id": "vimeo-001",
+      "name": "vuid",
+      "provider": "Vimeo, Inc.",
+      "category": "Analytics",
+      "expiry": "2 years",
+      "regex": "^vuid$",
+      "description": "Vimeo analytics cookie that assigns a unique identifier to the visitor. Used by Vimeo to collect usage statistics for embedded video players.",
+      "sourceUrl": "https://help.vimeo.com/hc/en-us/articles/26080940921361-Vimeo-Player-Cookies",
+      "addedBy": "seed"
+    },
+    {
+      "id": "vimeo-002",
+      "name": "player",
+      "provider": "Vimeo, Inc.",
+      "category": "Personalized",
+      "expiry": "1 year",
+      "regex": "^player$",
+      "description": "Stores Vimeo video player preferences such as volume level and playback quality settings. Ensures a consistent viewing experience across embedded Vimeo players.",
+      "sourceUrl": "https://help.vimeo.com/hc/en-us/articles/26080940921361-Vimeo-Player-Cookies",
+      "addedBy": "seed"
+    },
+    {
       "id": "github-001",
       "name": "ghcc",
       "provider": "GitHub",
@@ -1246,6 +1268,6 @@
   "metadata": {
     "version": "1.5.0",
     "lastUpdated": "2026-02-26",
-    "totalCookies": 126
+    "totalCookies": 128
   }
 }
