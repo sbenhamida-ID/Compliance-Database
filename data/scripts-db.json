@@ -291,6 +291,16 @@
       "addedBy": "seed"
     },
     {
+      "id": "script-033",
+      "name": "X (Twitter) Embedded Tweet Iframes",
+      "provider": "X Corp. (formerly Twitter)",
+      "category": "Marketing",
+      "regex": "platform\\.twitter\\.com/(embed|widgets)/.*\\.html",
+      "description": "Embedded tweets and Twitter widgets.",
+      "sourceUrl": "https://developer.x.com/en/docs/twitter-for-websites/embedded-tweets/overview",
+      "addedBy": "seed"
+    },
+    {
       "id": "script-030",
       "name": "Alibaba ARMS iTrace (Woodpecker)",
       "provider": "Alibaba Group",
@@ -306,7 +316,7 @@
       "provider": "ExploreEarth3D (Unknown)",
       "category": "Blocklisted",
       "regex": "exploreearth3d\\.com",
-      "description": "Embeddable 3D globe and satellite imagery viewer. The parent site runs Google Analytics, GTM, and DoubleClick (Google Ads). No public documentation on data collection or privacy practices.",
+      "description": "Embeddable 3D globe and satellite imagery viewer.",
       "sourceUrl": "https://urlquery.net/report/70fc3a8b-e27c-4f5a-a638-f3e13bbb8ae2",
       "addedBy": "seed"
     },
@@ -356,6 +366,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-03",
-    "totalScripts": 30
+    "totalScripts": 31
   }
 }
