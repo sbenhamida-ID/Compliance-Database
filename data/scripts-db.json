@@ -314,9 +314,9 @@
       "id": "script-032",
       "name": "Vimeo Player Embed",
       "provider": "Vimeo, Inc.",
-      "category": "Personalized",
+      "category": "Essential",
       "regex": "vimeo\\.com",
-      "description": "Vimeo's embeddable video player for hosting and playing video content. Sets a vuid analytics cookie (2 years), player preference cookies (volume, quality), and Cloudflare bot-management cookies. Supports a DNT parameter (?dnt=1) to suppress analytics cookies.",
+      "description": "Vimeo's embeddable video player for hosting and playing video content. Use the DNT parameter (?dnt=1) on embed URLs to suppress analytics cookies while keeping playback functional.",
       "sourceUrl": "https://help.vimeo.com/hc/en-us/articles/26080940921361-Vimeo-Player-Cookies",
       "addedBy": "seed"
     }
