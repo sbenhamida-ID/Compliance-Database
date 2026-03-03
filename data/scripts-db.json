@@ -14,7 +14,7 @@
       "id": "script-002",
       "name": "Google Tag Manager",
       "provider": "Google LLC",
-      "category": "Analytics",
+      "category": "Essential",
       "regex": "googletagmanager\\.com",
       "description": "Tag management system for deploying and managing marketing and analytics tags without code changes.",
       "sourceUrl": "https://developers.google.com/tag-platform/tag-manager",
