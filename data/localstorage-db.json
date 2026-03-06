@@ -56,6 +56,27 @@
       "addedBy": "seed"
     },
     {
+      "id": "vwo-ls-005",
+      "name": "vwo_apm_sent",
+      "provider": "VWO (Visual Website Optimizer)",
+      "category": "Analytics",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^vwo_apm_sent$",
+      "description": "Set by VWO's monitoring library after performance data has been sampled and sent. Acts as a deduplication flag to prevent the monitoring payload from being transmitted more than once per browser context.",
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/43165069643929-VWO-Local-Storage-Keys",
+      "addedBy": "seed"
+    },
+    {
+      "id": "unknown-ls-001",
+      "name": "lastDomChange",
+      "provider": "Unknown",
+      "category": "Blocklisted",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^lastDomChange$",
+      "description": "Blocklisted until provider or purpose confirmed.",
+      "addedBy": "seed"
+    },
+    {
       "id": "grecaptcha-ls-001",
       "name": "_grecaptcha",
       "provider": "Google reCAPTCHA",
@@ -112,7 +133,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-02-23",
-    "totalItems": 7
+    "lastUpdated": "2026-03-06",
+    "totalItems": 9
   }
 }
