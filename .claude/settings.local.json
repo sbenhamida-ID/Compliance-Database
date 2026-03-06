@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:cookiedatabase.org)"
+      "WebFetch(domain:cookiedatabase.org)",
+      "WebFetch(domain:help.vwo.com)"
     ]
   }
 }
