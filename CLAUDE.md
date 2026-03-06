@@ -47,6 +47,8 @@ Final list = (seed - deleted + modifications) + user items. Seed JSON files are 
 ## Where to Change What
 
 - **Before adding any item**: Confirm the script, cookie, or localStorage item is actually used and implemented in the site's source code. Many items discovered by Osano may be injected by visitors' browser extensions, third-party tools, or translation services and do not belong in the database.
+- **Unknown provider or purpose**: If a cookie, script, or localStorage item has no clearly confirmed provider or purpose, still add it to the relevant database but classify it as `Blocklisted` with the description: `"Blocklisted until provider or purpose confirmed."` Never assign a speculative category or provider.
+- **When in doubt, ask**: Do not make assumptions or unilateral decisions. If there are multiple plausible interpretations, options, or missing information, stop and ask the user before proceeding.
 - **Add/change seed cookies**: `data/cookies-db.json`. Mark deprecated with `"deprecated": true`. Unknown cookies from Osano go in as **Blocklisted**.
 - **Add/change seed scripts**: `data/scripts-db.json`. Same as cookies but no `expiry`; `regex` matches URL patterns.
 - **Add/change seed localStorage items**: `data/localstorage-db.json`. Uses `persistence` instead of `expiry`.
