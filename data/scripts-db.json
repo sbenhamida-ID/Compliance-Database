@@ -339,6 +339,16 @@
       "description": "SoundCloud embedded audio player for streaming tracks or playlists. Sets tracking cookies and shares data with advertisers. No privacy-enhanced embed option available.",
       "sourceUrl": "https://developers.soundcloud.com/docs/api/html5-widget",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-035",
+      "name": "Google SafeFrame Ad Container",
+      "provider": "Google LLC",
+      "category": "Blocklisted",
+      "regex": "safeframe\\.googlesyndication\\.com",
+      "description": "Google SafeFrame iframe used to render ads in a sandboxed container. Not implemented on the site; injected by browser extensions.",
+      "sourceUrl": "https://support.google.com/admanager/answer/6023110",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -376,6 +386,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-09",
-    "totalScripts": 32
+    "totalScripts": 33
   }
 }
