@@ -50,7 +50,7 @@ Share a concise summary with the user:
 - **Item**: name
 - **Type**: cookie / script / iframe / localStorage
 - **Provider**: confirmed provider (or "Unknown" if unconfirmed)
-- **Category**: recommended Osano category (Essential, Analytics, Marketing, Personalized, or Blocklisted)
+- **Category**: recommended Osano category (Essential, Analytics, Marketing, Personalized, or Blocklisted) — must be GDPR and UK ICO compliant
 - **Description**: simple, short, factual — this is what end users see
 - **Expiry/Persistence**: if applicable
 - **Regex**: suggested pattern
@@ -87,3 +87,4 @@ Then move to the next item (if any) or end.
 - Iframes are treated as scripts (same data model, same JSON file).
 - Never assume. If multiple interpretations exist, ask the user.
 - When presenting findings, clearly distinguish confirmed facts from uncertain information.
+- **Classifications must be GDPR and UK ICO compliant.** When assigning categories, apply the strictest reasonable interpretation: if an item sets cross-site tracking cookies, shares data with advertisers, or has no privacy-enhanced embed option, classify accordingly (e.g., Marketing, not Personalized). Err on the side of user privacy.
