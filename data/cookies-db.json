@@ -8,7 +8,8 @@
       "expiry": "2 years",
       "regex": "^_ga$",
       "description": "Google Analytics Cookie that helps us count how many people visit our website by tracking if you’ve visited before.",
-      "sourceUrl": "https://developers.google.com/tag-platform/security/guides/customize-cookies"    },
+      "sourceUrl": "https://developers.google.com/tag-platform/security/guides/customize-cookies"
+    },
     {
       "id": "ga-002",
       "name": "_gid",
@@ -18,7 +19,8 @@
       "regex": "^_gid$",
       "description": "Legacy Universal Analytics cookie used to distinguish users. Stores and updates a unique value for each page visited. Universal Analytics was sunset on July 1, 2024; this cookie will no longer be set by new GA implementations but may persist on sites still loading the legacy analytics.js library.",
       "sourceUrl": "https://developers.google.com/tag-platform/security/guides/customize-cookies",
-      "deprecated": true    },
+      "deprecated": true
+    },
     {
       "id": "ga-003",
       "name": "_gat",
@@ -28,7 +30,8 @@
       "regex": "^_gat.*$",
       "description": "Legacy Universal Analytics cookie used to throttle request rate, limiting data collection on high traffic sites. Universal Analytics was sunset on July 1, 2024; this cookie will no longer be set by new GA implementations but may persist on sites still loading the legacy analytics.js library.",
       "sourceUrl": "https://developers.google.com/tag-platform/security/guides/customize-cookies",
-      "deprecated": true    },
+      "deprecated": true
+    },
     {
       "id": "ga4-001",
       "name": "_ga_{MEASUREMENT_ID}",
@@ -37,7 +40,8 @@
       "expiry": "2 years",
       "regex": "^_ga_.*$",
       "description": "Used by Google Analytics to find and track an individual session with your device.",
-      "sourceUrl": "https://developers.google.com/analytics/devguides/collection/ga4/reference/config"    },
+      "sourceUrl": "https://developers.google.com/analytics/devguides/collection/ga4/reference/config"
+    },
     {
       "id": "gtm-001",
       "name": "_gcl_au",
@@ -46,7 +50,8 @@
       "expiry": "90 days",
       "regex": "^_gcl_au$",
       "description": "Set by the Conversion Linker (gtm.js) for Google Ads conversion tracking. Stores a first-party identifier so conversions can be attributed to ad clicks across sessions and devices. Required for accurate Google Ads conversion measurement; can be customized or disabled via Conversion Linker tag settings.",
-      "sourceUrl": "https://support.google.com/tagmanager/answer/7549390"    },
+      "sourceUrl": "https://support.google.com/tagmanager/answer/7549390"
+    },
     {
       "id": "gtm-002",
       "name": "_gcl_aw",
@@ -55,7 +60,8 @@
       "expiry": "90 days",
       "regex": "^_gcl_aw$",
       "description": "Stores Google Ads click data for conversion attribution.",
-      "sourceUrl": "https://cookiedatabase.org/cookie/google-ads/_gcl_aw/"    },
+      "sourceUrl": "https://cookiedatabase.org/cookie/google-ads/_gcl_aw/"
+    },
     {
       "id": "meta-001",
       "name": "_fbp",
@@ -64,7 +70,8 @@
       "expiry": "90 days",
       "regex": "^_fbp$",
       "description": "Identifies browsers for delivering advertising and site analytics services. Used by Facebook to deliver targeted advertisements.",
-      "sourceUrl": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/"    },
+      "sourceUrl": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/"
+    },
     {
       "id": "meta-002",
       "name": "fr",
@@ -73,7 +80,8 @@
       "expiry": "90 days",
       "regex": "^fr$",
       "description": "Facilitates ad delivery and retargeting. Contains browser and user unique ID combo for targeted advertising.",
-      "sourceUrl": "https://www.facebook.com/policy/cookies/"    },
+      "sourceUrl": "https://www.facebook.com/policy/cookies/"
+    },
     {
       "id": "meta-003",
       "name": "_fbc",
@@ -82,7 +90,8 @@
       "expiry": "90 days",
       "regex": "^_fbc$",
       "description": "Stores last Facebook click identifier. Used to attribute conversions to Facebook ads.",
-      "sourceUrl": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/"    },
+      "sourceUrl": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/fbp-and-fbc/"
+    },
     {
       "id": "google-001",
       "name": "NID",
@@ -91,7 +100,8 @@
       "expiry": "6 months",
       "regex": "^NID$",
       "description": "Contains a unique ID used to remember preferences and other information such as preferred language, search results per page, and SafeSearch settings. Also used to customize ads.",
-      "sourceUrl": "https://policies.google.com/technologies/types"    },
+      "sourceUrl": "https://policies.google.com/technologies/types"
+    },
     {
       "id": "google-002",
       "name": "CONSENT",
@@ -100,7 +110,8 @@
       "expiry": "19 years",
       "regex": "^CONSENT$",
       "description": "Stores the status of user's consent to the use of various Google services. Also serves security purposes like verifying users and preventing credential fraud.",
-      "sourceUrl": "https://policies.google.com/technologies/cookies"    },
+      "sourceUrl": "https://policies.google.com/technologies/cookies"
+    },
     {
       "id": "hubspot-001",
       "name": "__hstc",
@@ -109,7 +120,8 @@
       "expiry": "6 months",
       "regex": "^__hstc$",
       "description": "Hubspot set this main cookie for tracking visitors. It contains the domain, initial timestamp (first visit), last timestamp (last visit), current timestamp (this visit), and session number (increments for each subsequent session).",
-      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"    },
+      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"
+    },
     {
       "id": "hubspot-002",
       "name": "hubspotutk",
@@ -118,7 +130,8 @@
       "expiry": "6 months",
       "regex": "^hubspotutk$",
       "description": "HubSpot sets this cookie to keep track of the visitors to the website. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.",
-      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"    },
+      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"
+    },
     {
       "id": "hubspot-003",
       "name": "__hssc",
@@ -127,7 +140,8 @@
       "expiry": "30 minutes",
       "regex": "^__hssc$",
       "description": "Session tracking; domain, view count, session start; drives __hstc updates.",
-      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"    },
+      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"
+    },
     {
       "id": "hubspot-004",
       "name": "__hssrc",
@@ -136,7 +150,8 @@
       "expiry": "Session",
       "regex": "^__hssrc$",
       "description": "Set when session cookie changes; detects browser restart (new session if absent).",
-      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"    },
+      "sourceUrl": "https://knowledge.hubspot.com/reports/what-cookies-does-hubspot-set-in-a-visitor-s-browser"
+    },
     {
       "id": "hotjar-001",
       "name": "_hjid",
@@ -145,7 +160,8 @@
       "expiry": "365 days",
       "regex": "^_hjid$",
       "description": "Set when a user first lands on a page with Hotjar script. Persists the Hotjar User ID unique to that site on the browser.",
-      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819973371409-Cookies-Set-by-the-Hotjar-Tracking-Code"    },
+      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819973371409-Cookies-Set-by-the-Hotjar-Tracking-Code"
+    },
     {
       "id": "hotjar-002",
       "name": "_hjSessionUser_{site_id}",
@@ -154,7 +170,8 @@
       "expiry": "365 days",
       "regex": "^_hjSessionUser_\\d+$",
       "description": "Set when a user first lands on a page. Persists the Hotjar User ID unique to that site. Ensures data from subsequent visits are attributed to the same user.",
-      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819973371409-Cookies-Set-by-the-Hotjar-Tracking-Code"    },
+      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819973371409-Cookies-Set-by-the-Hotjar-Tracking-Code"
+    },
     {
       "id": "hotjar-003",
       "name": "_hjSession_{site_id}",
@@ -163,7 +180,8 @@
       "expiry": "30 minutes",
       "regex": "^_hjSession_\\d+$",
       "description": "Holds current session data. Ensures subsequent requests in the session window are attributed to the same session.",
-      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819973371409-Cookies-Set-by-the-Hotjar-Tracking-Code"    },
+      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819973371409-Cookies-Set-by-the-Hotjar-Tracking-Code"
+    },
     {
       "id": "linkedin-001",
       "name": "li_gc",
@@ -172,7 +190,8 @@
       "expiry": "6 months",
       "regex": "^li_gc$",
       "description": "Stores visitors' consent regarding the use of cookies for non-essential purposes on LinkedIn.",
-      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"    },
+      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"
+    },
     {
       "id": "linkedin-002",
       "name": "bcookie",
@@ -181,7 +200,8 @@
       "expiry": "1 year",
       "regex": "^bcookie$",
       "description": "Browser Identifier cookie. Uniquely identifies devices accessing LinkedIn to detect abuse on the platform.",
-      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"    },
+      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"
+    },
     {
       "id": "linkedin-003",
       "name": "lidc",
@@ -190,7 +210,8 @@
       "expiry": "1 day",
       "regex": "^lidc$",
       "description": "Facilitates data center selection to optimize LinkedIn performance.",
-      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"    },
+      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"
+    },
     {
       "id": "linkedin-004",
       "name": "UserMatchHistory",
@@ -199,7 +220,8 @@
       "expiry": "30 days",
       "regex": "^UserMatchHistory$",
       "description": "LinkedIn Ads ID syncing for tracking conversions, retargeting, and analytics.",
-      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"    },
+      "sourceUrl": "https://www.linkedin.com/legal/l/cookie-table"
+    },
     {
       "id": "linkedin-005",
       "name": "AnalyticsSyncHistory",
@@ -248,7 +270,8 @@
       "expiry": "Session",
       "regex": "^JSESSIONID$",
       "description": "Used to maintain an anonymous user session by the server. Standard Java session identifier.",
-      "sourceUrl": "https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpSession.html"    },
+      "sourceUrl": "https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpSession.html"
+    },
     {
       "id": "essential-002",
       "name": "PHPSESSID",
@@ -257,7 +280,8 @@
       "expiry": "Session",
       "regex": "^PHPSESSID$",
       "description": "Standard PHP session cookie. Contains a unique session identifier to maintain user state across page requests.",
-      "sourceUrl": "https://www.php.net/manual/en/session.configuration.php"    },
+      "sourceUrl": "https://www.php.net/manual/en/session.configuration.php"
+    },
     {
       "id": "essential-003",
       "name": "ASP.NET_SessionId",
@@ -266,7 +290,8 @@
       "expiry": "Session",
       "regex": "^ASP\\.NET_SessionId$",
       "description": "Standard ASP.NET session state cookie. Maintains a unique session identifier for each user.",
-      "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state"    },
+      "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state"
+    },
     {
       "id": "osano-001",
       "name": "osano_consentmanager",
@@ -327,7 +352,8 @@
       "expiry": "Session",
       "regex": "^lang$",
       "description": "Stores the user's preferred language setting to provide localized content.",
-      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language"    },
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language"
+    },
     {
       "id": "personalized-002",
       "name": "timezone",
@@ -336,7 +362,8 @@
       "expiry": "1 year",
       "regex": "^timezone$",
       "description": "Stores the user's timezone preference for displaying time-sensitive content correctly.",
-      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"    },
+      "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat"
+    },
     {
       "id": "blocklisted-001",
       "name": "IDE",
@@ -345,7 +372,8 @@
       "expiry": "2 years",
       "regex": "^IDE$",
       "description": "DoubleClick advertising cookie used to register what ads have been displayed to the user, to determine which ad is most relevant. Used for ad delivery, retargeting, and conversion tracking across sites.",
-      "sourceUrl": "https://policies.google.com/technologies/ads"    },
+      "sourceUrl": "https://policies.google.com/technologies/ads"
+    },
     {
       "id": "blocklisted-001b",
       "name": "DSID",
@@ -354,7 +382,8 @@
       "expiry": "2 weeks",
       "regex": "^DSID$",
       "description": "DoubleClick cookie that identifies signed-in users on non-Google sites to respect their ad personalization settings. Short-lived compared to other DoubleClick cookies.",
-      "sourceUrl": "https://policies.google.com/technologies/ads"    },
+      "sourceUrl": "https://policies.google.com/technologies/ads"
+    },
     {
       "id": "blocklisted-002",
       "name": "test_cookie",
@@ -363,7 +392,8 @@
       "expiry": "15 minutes",
       "regex": "^test_cookie$",
       "description": "Used by DoubleClick to check if the browser supports cookies before setting ad cookies. Part of standard ad tech; user can enable or disable via consent.",
-      "sourceUrl": "https://policies.google.com/technologies/ads"    },
+      "sourceUrl": "https://policies.google.com/technologies/ads"
+    },
     {
       "id": "vwo-001",
       "name": "_vwo_uuid_v2",
@@ -372,7 +402,8 @@
       "expiry": "366 days",
       "regex": "^_vwo_uuid_v2$",
       "description": "This VWO cookie calculates unique traffic on a website. It's used for A/B testing and experience optimization.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-002",
       "name": "_vwo_uuid",
@@ -381,7 +412,8 @@
       "expiry": "365 days",
       "regex": "^_vwo_uuid$",
       "description": "This VWO cookie generates a unique id for every visitor",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-003",
       "name": "_vis_opt_s",
@@ -390,7 +422,8 @@
       "expiry": "100 days",
       "regex": "^_vis_opt_s$",
       "description": "This VWO cookie tracks session created for a visitor",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-004",
       "name": "_vis_opt_test_cookie",
@@ -399,7 +432,8 @@
       "expiry": "Session",
       "regex": "^_vis_opt_test_cookie$",
       "description": "This VWO cookie is to read if cookies can be placed.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-005",
       "name": "_vis_opt_exp_{CAMPAIGN}_combi",
@@ -408,7 +442,8 @@
       "expiry": "100 days",
       "regex": "^_vis_opt_exp_\\d+_combi$",
       "description": "Ensures visitors see the same variation upon revisiting. Stores the assigned experiment variation. The cookie name includes the campaign identifier.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-006",
       "name": "_vis_opt_exp_{CAMPAIGN}_goal_{GOAL}",
@@ -417,7 +452,8 @@
       "expiry": "100 days",
       "regex": "^_vis_opt_exp_\\d+_goal_\\d+$",
       "description": "Created when a campaign goal is triggered. Tracks goal completions for VWO experiments. The cookie name includes the campaign and goal identifiers.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-007",
       "name": "_vwo_sn",
@@ -426,7 +462,8 @@
       "expiry": "30 minutes",
       "regex": "^_vwo_sn$",
       "description": "This VWO cookie stores session-level information",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-008",
       "name": "_vwo_ds",
@@ -435,7 +472,8 @@
       "expiry": "Variable",
       "regex": "^_vwo_ds$",
       "description": "This VWO cookie stores persistent visitor-level data for VWO Insights.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-009",
       "name": "debug_vwo_uuid",
@@ -444,7 +482,8 @@
       "expiry": "10 years",
       "regex": "^debug_vwo_uuid$",
       "description": "Debug cookie that generates a unique identifier for each visitor. Used for report segmentation and refined data analysis during VWO debugging.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-010",
       "name": "debug_vis_opt_s",
@@ -453,7 +492,8 @@
       "expiry": "100 days",
       "regex": "^debug_vis_opt_s$",
       "description": "Debug cookie that detects whether a visitor is new or returning to a particular test. Used for VWO debugging purposes.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-011",
       "name": "debug_vwo_ds",
@@ -462,7 +502,8 @@
       "expiry": "Variable",
       "regex": "^debug_vwo_ds$",
       "description": "Debug cookie that stores persistent visitor-level data for VWO Insights. Duration depends on account's retention period.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-024",
       "name": "debug_vwo_sn",
@@ -471,7 +512,8 @@
       "expiry": "30 minutes",
       "regex": "^debug_vwo_sn$",
       "description": "Debug cookie that stores session-level information. Duration is 30 minutes and resets on visitor activity. Created while previewing or viewing heatmaps.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-012",
       "name": "_vwo_ssm",
@@ -480,7 +522,8 @@
       "expiry": "3650 days",
       "regex": "^_vwo_ssm$",
       "description": "This VWO cookie is used for testing and is created only on sites that use the HTTP protocol.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-013",
       "name": "_vwo",
@@ -489,7 +532,8 @@
       "expiry": "365 Days",
       "regex": "^_vwo$",
       "description": "This VWO cookie is a jar of all the VWO cookies. It is currently created only for the Safari browser ",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "vwo-014",
       "name": "_vwo_uuid_{CAMPAIGN_ID}",
@@ -498,7 +542,8 @@
       "expiry": "365 Days",
       "regex": "^_vwo_uuid.+$",
       "description": "This VWO cookie is created for each cross-domain campaign. The cookie name includes the campaign identifier.",
-      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"    },
+      "sourceUrl": "https://help.vwo.com/hc/en-us/articles/360033990873-Cookies-Stored-by-VWO"
+    },
     {
       "id": "recaptcha-001",
       "name": "_GRECAPTCHA",
@@ -507,7 +552,8 @@
       "expiry": "6 months",
       "regex": "^_GRECAPTCHA$",
       "description": "Set by Google reCAPTCHA to identify bots and protect the website against malicious spam attacks. Required for form submissions.",
-      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"    },
+      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"
+    },
     {
       "id": "recaptcha-002",
       "name": "rc::a",
@@ -516,7 +562,8 @@
       "expiry": "Persistent",
       "regex": "^rc::a$",
       "description": "Used to track and analyze user behavior to distinguish humans from bots. Persistent cookie that does not expire.",
-      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"    },
+      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"
+    },
     {
       "id": "recaptcha-003",
       "name": "rc::b",
@@ -525,7 +572,8 @@
       "expiry": "Session",
       "regex": "^rc::b$",
       "description": "Session cookie set by reCAPTCHA to identify bots and protect against spam attacks.",
-      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"    },
+      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"
+    },
     {
       "id": "recaptcha-004",
       "name": "rc::c",
@@ -534,7 +582,8 @@
       "expiry": "Session",
       "regex": "^rc::c$",
       "description": "Session cookie set by reCAPTCHA for bot detection and spam protection.",
-      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"    },
+      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"
+    },
     {
       "id": "wordpress-001",
       "name": "wordpress_logged_in_{hash}",
@@ -543,7 +592,8 @@
       "expiry": "48 hours / 14 days",
       "regex": "^wordpress_logged_in_[a-f0-9]+$",
       "description": "Indicates when a user is logged in and identifies the user for interface interactions. Expires in 48 hours, or 14 days if 'Remember Me' is selected.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-002",
       "name": "wordpress_sec_{hash}",
@@ -552,7 +602,8 @@
       "expiry": "48 hours / 14 days",
       "regex": "^wordpress_sec_[a-f0-9]+$",
       "description": "Secure authentication cookie for WordPress. Used alongside wordpress_logged_in for HTTPS connections.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-003",
       "name": "wp-settings-{UID}",
@@ -561,7 +612,8 @@
       "expiry": "1 year",
       "regex": "^wp-settings-\\d+$",
       "description": "Stores user-specific settings and preferences for the WordPress admin interface. The cookie name includes the user identifier.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-004",
       "name": "wp-settings-time-{UID}",
@@ -570,7 +622,8 @@
       "expiry": "1 year",
       "regex": "^wp-settings-time-\\d+$",
       "description": "Stores the time when wp-settings cookie was set. Used in conjunction with wp-settings for admin preferences. The cookie name includes the user identifier.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-005",
       "name": "wordpress_test_cookie",
@@ -579,7 +632,8 @@
       "expiry": "Session",
       "regex": "^wordpress_test_cookie$",
       "description": "Tests if cookies are enabled in the browser. Required for WordPress login functionality.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-006",
       "name": "comment_author_{hash}",
@@ -588,7 +642,8 @@
       "expiry": "365 days",
       "regex": "^comment_author_[a-f0-9]+$",
       "description": "Stores the comment author's name. Pre-fills the name field when leaving new comments.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-007",
       "name": "comment_author_email_{hash}",
@@ -597,7 +652,8 @@
       "expiry": "365 days",
       "regex": "^comment_author_email_[a-f0-9]+$",
       "description": "Stores the comment author's email. Pre-fills the email field when leaving new comments.",
-      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"    },
+      "sourceUrl": "https://developer.wordpress.org/advanced-administration/wordpress/cookies/"
+    },
     {
       "id": "wordpress-008",
       "name": "comment_author_url_{hash}",
@@ -966,7 +1022,7 @@
       "category": "Essential",
       "expiry": "2 years",
       "regex": "^SSID$",
-        "description": "Secure session identifier cookie used by Google to store user preferences and authenticate sessions. Collects visitor information for Google security purposes.",
+      "description": "Secure session identifier cookie used by Google to store user preferences and authenticate sessions. Collects visitor information for Google security purposes.",
       "sourceUrl": "https://policies.google.com/technologies/cookies"
     },
     {
@@ -1074,10 +1130,21 @@
       "name": "auth0.is.authenticated",
       "provider": "Auth0",
       "category": "Essential",
-      "expiry": "Session",
-      "regex": "^auth0\\.is\\.authenticated$",
-      "description": "Set by Auth0 SDK to indicate whether the user is authenticated in the current application context. Used by Auth0 client-side libraries for session checks.",
-      "sourceUrl": "https://auth0.com/docs/secure/security/data-security/cookies"
+      "expiry": "1 day",
+      "regex": "^(_legacy_)?auth0\\..*\\.is\\.authenticated$",
+      "description": "Indicates whether the user is currently authenticated via Auth0. The _legacy_ prefixed variant is a SameSite compatibility fallback for older browsers that do not support SameSite=None.",
+      "sourceUrl": "https://auth0.com/docs/sessions-and-cookies/samesite-cookie-attribute-changes"
+    },
+    {
+      "id": "auth0-004",
+      "name": "auth0.organization_hint",
+      "provider": "Auth0",
+      "category": "Essential",
+      "expiry": "1 day",
+      "regex": "^(_legacy_)?auth0\\..*\\.organization_hint$",
+      "description": "Stores which Auth0 organization the user last authenticated with. The _legacy_ prefixed variant is a SameSite compatibility fallback for older browsers that do not support SameSite=None.",
+      "sourceUrl": "https://auth0.com/docs/sessions-and-cookies/samesite-cookie-attribute-changes",
+      "addedBy": "seed"
     },
     {
       "id": "stripe-001",

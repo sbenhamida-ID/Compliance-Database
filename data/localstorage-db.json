@@ -97,6 +97,17 @@
       "description": "Temporary key set by Modernizr.js to test if localStorage is functional. Set, read back, and immediately removed. Should not persist.",
       "sourceUrl": "https://github.com/Modernizr/Modernizr/blob/master/feature-detects/storage/localstorage.js",
       "addedBy": "seed"
+    },
+    {
+      "id": "auth0-ls-001",
+      "name": "browser-tabs-lock-key-auth0.lock.getTokenSilently",
+      "provider": "Auth0",
+      "category": "Essential",
+      "persistence": "Transient (exists only while a token refresh lock is held)",
+      "regex": "^browser-tabs-lock-key-auth0\\.lock\\.getTokenSilently",
+      "description": "Used by the Auth0 SPA SDK to synchronize silent token refresh requests across browser tabs. Prevents concurrent calls to the token endpoint.",
+      "sourceUrl": "https://github.com/auth0/auth0-spa-js/issues/278",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -134,6 +145,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-06",
-    "totalItems": 9
+    "totalItems": 10
   }
 }
