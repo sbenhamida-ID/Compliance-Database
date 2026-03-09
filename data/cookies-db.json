@@ -1231,6 +1231,72 @@
       "regex": "^mp_[A-Za-z0-9\\W_]+_mixpanel$",
       "description": "Primary Mixpanel tracking cookie. The wildcard portion is the Mixpanel project token. Stores a unique device/user ID and super properties for analytics. Tracks user interactions across sessions to provide product usage insights. Set as a first-party cookie by the Mixpanel JS SDK.",
       "sourceUrl": "https://docs.mixpanel.com/docs/tracking-methods/sdks/javascript"
+    },
+    {
+      "id": "soundcloud-001",
+      "name": "sc_anonymous_id",
+      "provider": "SoundCloud Ltd.",
+      "category": "Marketing",
+      "expiry": "10 years",
+      "regex": "^sc_anonymous_id$",
+      "description": "Stores an anonymous visitor ID to track listeners across sites with embedded SoundCloud players.",
+      "sourceUrl": "https://www.cookiedatabase.org/cookie/soundcloud/sc_anonymous_id/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "soundcloud-002",
+      "name": "sc_tracking_anonymous_id",
+      "provider": "SoundCloud Ltd.",
+      "category": "Marketing",
+      "expiry": "10 years",
+      "regex": "^sc_tracking_anonymous_id$",
+      "description": "Secondary anonymous tracking ID used by SoundCloud for cross-site listener analytics.",
+      "sourceUrl": "https://www.cookiedatabase.org/cookie/soundcloud/sc_anonymous_id/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "soundcloud-003",
+      "name": "datadome",
+      "provider": "DataDome (used by SoundCloud)",
+      "category": "Essential",
+      "expiry": "1 year",
+      "regex": "^datadome$",
+      "description": "Bot detection and fraud prevention cookie. Encrypted, contains no personal data.",
+      "sourceUrl": "https://docs.datadome.co/docs/cookie-session-storage",
+      "addedBy": "seed"
+    },
+    {
+      "id": "soundcloud-004",
+      "name": "cookie_consent",
+      "provider": "SoundCloud Ltd.",
+      "category": "Essential",
+      "expiry": "Persistent",
+      "regex": "^cookie_consent$",
+      "description": "Stores the visitor's cookie consent choice for SoundCloud's own consent management.",
+      "sourceUrl": "https://soundcloud.com/pages/cookies",
+      "addedBy": "seed"
+    },
+    {
+      "id": "soundcloud-005",
+      "name": "sc_theme",
+      "provider": "SoundCloud Ltd.",
+      "category": "Personalized",
+      "expiry": "Persistent",
+      "regex": "^sc_theme$",
+      "description": "Stores the user's UI theme preference for the SoundCloud player.",
+      "sourceUrl": "https://soundcloud.com/pages/cookies",
+      "addedBy": "seed"
+    },
+    {
+      "id": "soundcloud-006",
+      "name": "sc_session",
+      "provider": "SoundCloud Ltd.",
+      "category": "Essential",
+      "expiry": "Session",
+      "regex": "^sc_session$",
+      "description": "Stores SoundCloud session data for playback and user state.",
+      "sourceUrl": "https://soundcloud.com/pages/cookies",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -1267,7 +1333,7 @@
   ],
   "metadata": {
     "version": "1.5.0",
-    "lastUpdated": "2026-02-26",
-    "totalCookies": 128
+    "lastUpdated": "2026-03-09",
+    "totalCookies": 134
   }
 }

@@ -329,6 +329,16 @@
       "description": "Vimeo's embeddable video player for hosting and playing video content.",
       "sourceUrl": "https://help.vimeo.com/hc/en-us/articles/26080940921361-Vimeo-Player-Cookies",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-034",
+      "name": "SoundCloud Embedded Player",
+      "provider": "SoundCloud Ltd.",
+      "category": "Marketing",
+      "regex": "w\\.soundcloud\\.com\\/player",
+      "description": "SoundCloud embedded audio player for streaming tracks or playlists. Sets tracking cookies and shares data with advertisers. No privacy-enhanced embed option available.",
+      "sourceUrl": "https://developers.soundcloud.com/docs/api/html5-widget",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -365,7 +375,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-03",
-    "totalScripts": 31
+    "lastUpdated": "2026-03-09",
+    "totalScripts": 32
   }
 }
