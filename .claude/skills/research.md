@@ -26,9 +26,10 @@ Ask these questions **one at a time**. Wait for the user's answer before asking 
 Stop early if you already have enough context to research effectively.
 
 1. "What page was `{item}` discovered on?"
-2. "Is `{item}` part of the page's own content/functionality, or from a third-party service?"
-3. "Do you recognize the provider or service behind `{item}`?" (skip if obvious from the name)
-4. Ask follow-up questions only if the answers so far are ambiguous or insufficient.
+2. "Is `{item}` part of the page's own content/functionality?"
+3. Are you using this `{item}` in your codebase? 
+4. "Do you recognize the provider or service behind `{item}`?" (skip if obvious from the name)
+5. Ask follow-up questions only if the answers so far are ambiguous or insufficient.
 
 Keep it conversational. Do not dump all questions at once.
 
