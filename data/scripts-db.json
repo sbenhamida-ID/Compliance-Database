@@ -349,6 +349,46 @@
       "description": "Google SafeFrame iframe used to render ads in a sandboxed container. Not implemented on the site; injected by browser extensions.",
       "sourceUrl": "https://support.google.com/admanager/answer/6023110",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-036",
+      "name": "Rokt Web SDK Controller",
+      "provider": "Rokt",
+      "category": "Marketing",
+      "regex": "apps\\.rokt\\.com/wsdk/controller/",
+      "description": "Rokt Web SDK controller iframe that orchestrates ad placement delivery.",
+      "sourceUrl": "https://docs.rokt.com/developers/integration-guides/data-and-security/web-security/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-037",
+      "name": "Rokt Web SDK DCUI Plugin",
+      "provider": "Rokt",
+      "category": "Marketing",
+      "regex": "apps\\.rokt\\.com/wsdk/plugins/dcui/",
+      "description": "Rokt Web SDK dynamic creative UI plugin for rendering ad placements.",
+      "sourceUrl": "https://docs.rokt.com/developers/integration-guides/data-and-security/web-security/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-038",
+      "name": "Rokt Web SDK Widget Plugin",
+      "provider": "Rokt",
+      "category": "Marketing",
+      "regex": "apps\\.rokt\\.com/wsdk/plugins/widget/",
+      "description": "Rokt Web SDK widget plugin for displaying ad offer placements.",
+      "sourceUrl": "https://docs.rokt.com/developers/integration-guides/data-and-security/web-security/",
+      "addedBy": "seed"
+    },
+    {
+      "id": "script-039",
+      "name": "Google Translate Website UI",
+      "provider": "Google LLC",
+      "category": "Blocklisted",
+      "regex": "translate\\.google\\.com/websitetranslationui",
+      "description": "Google Translate website translation UI iframe. Not implemented on the site; injected when visitors use Google Translate.",
+      "sourceUrl": "https://developers.google.com/search/blog/2020/05/google-translates-website-translator",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -386,6 +426,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-09",
-    "totalScripts": 33
+    "totalScripts": 37
   }
 }
