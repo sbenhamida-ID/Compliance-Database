@@ -18,14 +18,16 @@ If the type is not specified, ask before proceeding.
 ### Step 1: Parse Input
 
 Identify each item and its type from the user's message.
-If multiple items are provided, process them **one at a time** — complete the full workflow for one item before moving to the next.
+
+- **Single item**: Complete the full workflow (interview → research → present → ask to add).
+- **Multiple items (list)**: Interview and research **all items first**, present findings for the entire list in one summary table, then ask once: **"Do you want me to add these to the database?"** The user can approve all, select specific ones, or decline.
 
 ### Step 2: Interview (One Question at a Time)
 
 Ask these questions **one at a time**. Wait for the user's answer before asking the next.
 Stop early if you already have enough context to research effectively.
 
-1. "What page was `{item}` discovered on?"
+1. "What page was `{item}` discovered on?" — **If the user provides a URL, use WebFetch to explore that page** and gather context (scripts loaded, cookies set, third-party resources) before continuing the interview.
 2. "Is `{item}` part of the page's own content/functionality?"
 3. Are you using this `{item}` in your codebase? 
 4. "Do you recognize the provider or service behind `{item}`?" (skip if obvious from the name)
@@ -89,3 +91,31 @@ Then move to the next item (if any) or end.
 - Never assume. If multiple interpretations exist, ask the user.
 - When presenting findings, clearly distinguish confirmed facts from uncertain information.
 - **Classifications must be GDPR and UK ICO compliant.** When assigning categories, apply the strictest reasonable interpretation: if an item sets cross-site tracking cookies, shares data with advertisers, or has no privacy-enhanced embed option, classify accordingly (e.g., Marketing, not Personalized). Err on the side of user privacy.
+
+---
+
+## Usage Notes
+
+### How to use this skill
+
+In Claude Code CLI, type:
+
+```
+/research
+```
+
+Then describe your items. Examples:
+
+**Single item:**
+```
+/research
+_ga cookie
+```
+
+**List of items:**
+```
+/research
+cookies: _ga, _gid, _fbp, fr
+```
+
+The skill will interview you about each item, research them online, present findings, and offer to add them to the database.
