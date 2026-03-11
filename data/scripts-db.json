@@ -399,6 +399,16 @@
       "description": "Google Translate runtime JavaScript for in-page translation. Not implemented on the site; injected when visitors use Google Translate.",
       "sourceUrl": "https://developers.google.com/search/blog/2020/05/google-translates-website-translator",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-041",
+      "name": "Alipay Tracert Cross-Domain Iframe",
+      "provider": "Alipay (Ant Group / Alibaba)",
+      "category": "Blocklisted",
+      "regex": "tracert\\.alipay\\.com",
+      "description": "Cross-domain tracking iframe used by Alipay's internal analytics SDK. Enables cross-domain user activity tracking. Not implemented on the site; injected by browser extensions.",
+      "sourceUrl": "",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -436,6 +446,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-11",
-    "totalScripts": 38
+    "totalScripts": 39
   }
 }
