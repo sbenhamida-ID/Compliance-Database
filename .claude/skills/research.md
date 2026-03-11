@@ -13,6 +13,10 @@ Research and classify items discovered by Osano CMP, then optionally add them to
 The user provides one or more item names and their type (cookie, script, iframe, or localStorage).
 If the type is not specified, ask before proceeding.
 
+## Core Principle: Zero Assumptions
+
+Never assume when uncertain or when multiple valid options exist. Always ask the user. It's better to ask one extra question than to build on a wrong assumption.
+
 ## Workflow
 
 ### Step 1: Parse Input
@@ -61,9 +65,15 @@ Share a concise summary with the user:
 
 If provider or purpose cannot be confirmed from official sources, recommend **Blocklisted** with description: `"Blocklisted until provider or purpose confirmed."`
 
-Then ask: **"Do you want me to add this to the database?"**
+Then ask: **"Before adding this to the database, do you have any privacy concerns you'd like to discuss first? (y/n)"**
 
-If the user says no, move to the next item (if any) or end.
+- **If yes**: Act as an **e-Privacy officer**. Analyze the item and present the most relevant privacy concerns in a **numbered list** (e.g., cross-site tracking, data sharing with third parties, lack of consent mechanism, fingerprinting risks, GDPR/ePrivacy compliance issues). Continue the discussion with the user until they are satisfied and ask to proceed with adding the item.
+- **If no**: Move to the next question below.
+
+Then ask: **"Do you want me to add this to the database? (y/n)"**
+
+- **If yes**: Proceed with Step 5 (Add to Database).
+- **If no**: Ask the user why, so you can understand their reasoning. Then move to the next item (if any) or end.
 
 ### Step 5: Add to Database (if confirmed)
 
