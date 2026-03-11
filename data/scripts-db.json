@@ -389,6 +389,16 @@
       "description": "Google Translate website translation UI iframe. Not implemented on the site; injected when visitors use Google Translate.",
       "sourceUrl": "https://developers.google.com/search/blog/2020/05/google-translates-website-translator",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-040",
+      "name": "Google Translate Runtime Script",
+      "provider": "Google LLC",
+      "category": "Blocklisted",
+      "regex": "translate\\.googleapis\\.com",
+      "description": "Google Translate runtime JavaScript for in-page translation. Not implemented on the site; injected when visitors use Google Translate.",
+      "sourceUrl": "https://developers.google.com/search/blog/2020/05/google-translates-website-translator",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -425,7 +435,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-09",
-    "totalScripts": 37
+    "lastUpdated": "2026-03-11",
+    "totalScripts": 38
   }
 }
