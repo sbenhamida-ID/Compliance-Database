@@ -409,6 +409,16 @@
       "description": "Cross-domain tracking iframe used by Alipay's internal analytics SDK. Enables cross-domain user activity tracking. Not implemented on the site; injected by browser extensions.",
       "sourceUrl": "",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-042",
+      "name": "div.show Malicious Iframe",
+      "provider": "div.show (Malicious)",
+      "category": "Blocklisted",
+      "regex": "div\\.show",
+      "description": "Malicious iframe that loads obfuscated tracking and redirect code disguised as Bootstrap CSS. Commonly injected into compromised WordPress sites.",
+      "sourceUrl": "",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -446,6 +456,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-11",
-    "totalScripts": 39
+    "totalScripts": 40
   }
 }
