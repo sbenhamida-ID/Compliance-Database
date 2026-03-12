@@ -108,6 +108,17 @@
       "description": "Used by the Auth0 SPA SDK to synchronize silent token refresh requests across browser tabs. Prevents concurrent calls to the token endpoint.",
       "sourceUrl": "https://github.com/auth0/auth0-spa-js/issues/278",
       "addedBy": "seed"
+    },
+    {
+      "id": "i18next-ls-001",
+      "name": "i18nextLng",
+      "provider": "i18next",
+      "category": "Essential",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^i18nextLng$",
+      "description": "Stores the user's selected language preference for the i18next internationalization framework.",
+      "sourceUrl": "https://github.com/i18next/i18next-browser-languageDetector",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -145,6 +156,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-06",
-    "totalItems": 10
+    "totalItems": 11
   }
 }
