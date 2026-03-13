@@ -31,11 +31,12 @@ Identify each item and its type from the user's message.
 Ask these questions **one at a time**. Wait for the user's answer before asking the next.
 Stop early if you already have enough context to research effectively.
 
-1. "What page was `{item}` discovered on?" -- **If the user provides a URL, use WebFetch to explore that page** and gather context (scripts loaded, cookies set, third-party resources) before continuing the interview.
-2. "Is `{item}` part of the page's own content/functionality?"
-3. "Are you using this `{item}` in your codebase?"
-4. "Do you recognize the provider or service behind `{item}`?" (skip if obvious from the name)
-5. Ask follow-up questions only if the answers so far are ambiguous or insufficient.
+1. "What page / URL was `{item}` discovered on?" -- **If the user provides a URL, use WebFetch to explore that page** and gather context (scripts loaded, cookies set, third-party resources) before continuing the interview.
+2. "Are you using this `{item}` in your codebase? (y/n)" -- If yes, ask follow-ups about where it's used, its purpose, and any known provider details.
+3. "Is `{item}` part of the page's own content? (y/n)"
+4. "Do you recognize the provider or service behind `{item}`? (y/n)" -- If yes, ask for the provider name and any details they can share about its purpose or category.
+5. "Does Osano CMP provide any additional context about `{item}` (e.g., category, provider, description)?"
+6. Ask follow-up questions only if the answers so far are ambiguous or insufficient.
 
 Keep it conversational. Do not dump all questions at once.
 
