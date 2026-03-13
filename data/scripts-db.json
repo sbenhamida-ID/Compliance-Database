@@ -419,6 +419,16 @@
       "description": "Malicious iframe that loads obfuscated tracking and redirect code disguised as Bootstrap CSS. Commonly injected into compromised WordPress sites.",
       "sourceUrl": "",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-043",
+      "name": "Object.center Malicious Iframe",
+      "provider": "object.center (Malicious)",
+      "category": "Blocklisted",
+      "regex": "object\\.center",
+      "description": "Malicious iframe that loads obfuscated tracking and redirect code disguised as Bootstrap CSS. Collects referrer, screen resolution, and browser details via localStorage.",
+      "sourceUrl": "",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -456,6 +466,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-11",
-    "totalScripts": 40
+    "totalScripts": 41
   }
 }
