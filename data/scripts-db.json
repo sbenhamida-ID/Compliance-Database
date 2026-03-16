@@ -429,6 +429,16 @@
       "description": "Malicious iframe that loads obfuscated tracking and redirect code disguised as Bootstrap CSS. Collects referrer, screen resolution, and browser details via localStorage.",
       "sourceUrl": "",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-044",
+      "name": "Solvely Browser Extension Iframe",
+      "provider": "Solvely",
+      "category": "Blocklisted",
+      "regex": "solvely\\.ai",
+      "description": "Iframe injected by the Solvely browser extension, an AI-powered homework and study tool. Not implemented on the site.",
+      "sourceUrl": "https://solvely.ai/extension",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -465,7 +475,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-11",
-    "totalScripts": 41
+    "lastUpdated": "2026-03-16",
+    "totalScripts": 42
   }
 }
