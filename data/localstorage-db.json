@@ -119,6 +119,16 @@
       "description": "Stores the user's selected language preference for the i18next internationalization framework.",
       "sourceUrl": "https://github.com/i18next/i18next-browser-languageDetector",
       "addedBy": "seed"
+    },
+    {
+      "id": "unknown-ls-002",
+      "name": "_1773472967436",
+      "provider": "Unknown",
+      "category": "Blocklisted",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^_\\d{13}$",
+      "description": "Blocklisted until provider or purpose confirmed.",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -155,7 +165,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-06",
-    "totalItems": 11
+    "lastUpdated": "2026-03-16",
+    "totalItems": 12
   }
 }
