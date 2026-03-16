@@ -29,14 +29,15 @@ Identify each item and its type from the user's message.
 ### Step 2: Interview (One Question at a Time)
 
 Ask these questions **one at a time**. Wait for the user's answer before asking the next.
-Stop early if you already have enough context to research effectively.
+**Never stop the interview early** — always complete all questions below, even if the item was not found in the page URL, codebase, or content.
+
+**All questions must be closed (yes/no answers only).** Never combine two questions into one. Each question must ask about exactly one thing.
 
 1. "What page / URL was `{item}` discovered on?" -- **If the user provides a URL, use WebFetch to explore that page** and gather context (scripts loaded, cookies set, third-party resources) before continuing the interview.
 2. "Are you using this `{item}` in your codebase? (y/n)" -- If yes, ask follow-ups about where it's used, its purpose, and any known provider details.
 3. "Is `{item}` part of the page's own content? (y/n)"
 4. "Do you recognize the provider or service behind `{item}`? (y/n)" -- If yes, ask for the provider name and any details they can share about its purpose or category.
-5. "Does Osano CMP provide any additional context about `{item}` (e.g., category, provider, description)?"
-6. Ask follow-up questions only if the answers so far are ambiguous or insufficient.
+5. "Does Osano CMP provide any additional context about `{item}`? (y/n)" -- If yes, ask what context it provides.
 
 Keep it conversational. Do not dump all questions at once.
 
@@ -65,6 +66,12 @@ Share a concise summary with the user:
 - **Source**: official documentation URL
 
 If provider or purpose cannot be confirmed from official sources, recommend **Blocklisted** with description: `"Blocklisted until provider or purpose confirmed."`
+
+**After the summary, include a "Sources:" section** listing all relevant URLs from your research as markdown hyperlinks. Always show sources before asking any questions.
+
+**If `{item}` was not found in the shared page URL, codebase, or content AND the recommended category is not already Blocklisted**, ask: **"This `{item}` wasn't found in the shared page URL, codebase and content, would you like to change its category to Blocklisted? (y/n)"**
+- **If yes**: Update the item's category to **Blocklisted** and adjust the description accordingly.
+- **If no**: Keep the category from your research findings.
 
 Then ask: **"Before adding this to the database, do you have any privacy concerns you'd like to discuss first? (y/n)"**
 
@@ -105,5 +112,8 @@ Then move to the next item (if any) or end.
 - Assign a speculative category or provider when unconfirmed -- use Blocklisted
 - Write long or jargon-heavy descriptions
 - Dump all interview questions at once
+- Combine two questions into one -- each question must ask about exactly one thing
+- Stop the interview early -- always complete all questions even if the item wasn't found
+- Skip the Blocklisted category question when the item wasn't found in the page URL, codebase, or content
 - Skip the privacy concerns question before adding to database
 - Treat iframes differently from scripts (same data model, same JSON file)
