@@ -585,6 +585,16 @@
       "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"
     },
     {
+      "id": "recaptcha-005",
+      "name": "rc::f",
+      "provider": "Google reCAPTCHA",
+      "category": "Essential",
+      "expiry": "Persistent",
+      "regex": "^rc::f$",
+      "description": "Used by reCAPTCHA to distinguish between humans and bots.",
+      "sourceUrl": "https://developers.google.com/recaptcha/docs/faq"
+    },
+    {
       "id": "wordpress-001",
       "name": "wordpress_logged_in_{hash}",
       "provider": "WordPress",
