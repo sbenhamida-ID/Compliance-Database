@@ -179,6 +179,26 @@
       "regex": "^ytidb::LAST_RESULT_ENTRY_KEY$",
       "description": "Used by YouTube's IndexedDB wrapper to track the last database operation result for integrity checks.",
       "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-006",
+      "name": "yt.innertube::nextId",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^yt\\.innertube::nextId$",
+      "description": "Stores the next request ID for YouTube's Innertube API to maintain sequential request numbering.",
+      "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-007",
+      "name": "yt.innertube::requests",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^yt\\.innertube::requests$",
+      "description": "Stores pending or recent YouTube Innertube API request data for the embedded player.",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -216,6 +236,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-23",
-    "totalItems": 17
+    "totalItems": 19
   }
 }
