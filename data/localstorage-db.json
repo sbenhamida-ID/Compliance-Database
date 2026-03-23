@@ -129,6 +129,56 @@
       "regex": "^_\\d{13}$",
       "description": "Blocklisted until provider or purpose confirmed.",
       "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-001",
+      "name": "yt-player-bandwidth",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^yt-player-bandwidth$",
+      "description": "Stores estimated network bandwidth to optimize video stream quality in the YouTube embedded player.",
+      "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-002",
+      "name": "yt-player-user-settings",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^yt-player-user-settings$",
+      "description": "Stores YouTube player preferences such as volume level, playback quality, and subtitle settings.",
+      "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-003",
+      "name": "yt-remote-connected-devices",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^yt-remote-connected-devices$",
+      "description": "Stores a list of devices previously connected via YouTube's remote playback feature.",
+      "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-004",
+      "name": "yt-remote-device-id",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^yt-remote-device-id$",
+      "description": "Stores a unique device identifier used by YouTube's remote playback feature to identify the current browser.",
+      "addedBy": "seed"
+    },
+    {
+      "id": "yt-ls-005",
+      "name": "ytidb::LAST_RESULT_ENTRY_KEY",
+      "provider": "YouTube (Google)",
+      "category": "Marketing",
+      "persistence": "Persistent (localStorage)",
+      "regex": "^ytidb::LAST_RESULT_ENTRY_KEY$",
+      "description": "Used by YouTube's IndexedDB wrapper to track the last database operation result for integrity checks.",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -165,7 +215,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-16",
-    "totalItems": 12
+    "lastUpdated": "2026-03-23",
+    "totalItems": 17
   }
 }
