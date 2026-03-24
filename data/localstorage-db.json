@@ -121,6 +121,17 @@
       "addedBy": "seed"
     },
     {
+      "id": "i18next-ls-002",
+      "name": "i18next.translate.boo",
+      "provider": "i18next",
+      "category": "Essential",
+      "persistence": "Transient (set and removed during localStorage availability check)",
+      "regex": "^i18next\\.translate\\.boo$",
+      "description": "Temporary key used by i18next-browser-languagedetector to verify localStorage can be written and read. Removed immediately afterward.",
+      "sourceUrl": "https://github.com/i18next/i18next-browser-languageDetector/blob/v8.0.0/src/browserLookups/localStorage.js",
+      "addedBy": "seed"
+    },
+    {
       "id": "unknown-ls-002",
       "name": "_1773472967436",
       "provider": "Unknown",
@@ -235,7 +246,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "lastUpdated": "2026-03-23",
-    "totalItems": 19
+    "lastUpdated": "2026-03-24",
+    "totalItems": 20
   }
 }
