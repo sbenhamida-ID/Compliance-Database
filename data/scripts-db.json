@@ -469,6 +469,16 @@
       "description": "Legacy Universal Analytics JavaScript library. Sends page view and event measurement to Google for UA properties. Standard Universal Analytics processing ended July 2024.",
       "sourceUrl": "https://support.google.com/analytics/answer/11583528",
       "addedBy": "seed"
+    },
+    {
+      "id": "script-048",
+      "name": "Devyce Softphone Iframe",
+      "provider": "Devyce",
+      "category": "Blocklisted",
+      "regex": "softphone\\.devyce\\.io",
+      "description": "Blocklisted until provider or purpose confirmed.",
+      "sourceUrl": "https://devyce.com/privacy-policy/",
+      "addedBy": "seed"
     }
   ],
   "categories": [
@@ -506,6 +516,6 @@
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2026-03-24",
-    "totalScripts": 47
+    "totalScripts": 48
   }
 }
