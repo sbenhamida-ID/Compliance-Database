@@ -33,6 +33,17 @@
       "deprecated": true
     },
     {
+      "id": "ga-004",
+      "name": "_gat_gtag_UA_{PROPERTY_ID}",
+      "provider": "Google Analytics (Universal Analytics)",
+      "category": "Analytics",
+      "expiry": "1 minute",
+      "regex": "^_gat_gtag_UA_[0-9]+_[0-9]+$",
+      "description": "Short-lived Google Analytics gtag cookie used to limit request rate for a Universal Analytics property.",
+      "sourceUrl": "https://cookiedatabase.org/cookie/google-analytics/_gat_gtag_ua_-2/",
+      "deprecated": true
+    },
+    {
       "id": "ga4-001",
       "name": "_ga_{MEASUREMENT_ID}",
       "provider": "Google Analytics 4",
@@ -1157,6 +1168,39 @@
       "addedBy": "seed"
     },
     {
+      "id": "auth0-005",
+      "name": "auth0_compat",
+      "provider": "Auth0",
+      "category": "Essential",
+      "expiry": "Session",
+      "regex": "^auth0_compat$",
+      "description": "Fallback cookie for Auth0 single sign-on when the browser does not support SameSite=None. Used with the main auth0 session cookie.",
+      "sourceUrl": "https://auth0.com/docs/manage-users/cookies/authentication-api-cookies",
+      "addedBy": "seed"
+    },
+    {
+      "id": "auth0-006",
+      "name": "did",
+      "provider": "Auth0",
+      "category": "Essential",
+      "expiry": "Variable",
+      "regex": "^did$",
+      "description": "Identifies the device or browser for Auth0 attack protection during login. Set on the Auth0 tenant or custom login domain.",
+      "sourceUrl": "https://auth0.com/docs/manage-users/cookies/authentication-api-cookies",
+      "addedBy": "seed"
+    },
+    {
+      "id": "auth0-007",
+      "name": "did_compat",
+      "provider": "Auth0",
+      "category": "Essential",
+      "expiry": "Variable",
+      "regex": "^did_compat$",
+      "description": "Fallback cookie for Auth0 attack protection when the browser does not support SameSite=None. Works with the main device identification cookie on the Auth0 login domain.",
+      "sourceUrl": "https://auth0.com/docs/manage-users/cookies/authentication-api-cookies",
+      "addedBy": "seed"
+    },
+    {
       "id": "stripe-001",
       "name": "__stripe_mid",
       "provider": "Stripe",
@@ -1410,7 +1454,7 @@
   ],
   "metadata": {
     "version": "1.5.0",
-    "lastUpdated": "2026-03-09",
-    "totalCookies": 134
+    "lastUpdated": "2026-03-24",
+    "totalCookies": 140
   }
 }
